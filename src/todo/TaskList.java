@@ -2,7 +2,7 @@ package todo;
 
 import java.util.ArrayList;
 
-public class Lista {
+public class TaskList {
 	
 	private ArrayList<Task> tasks = new ArrayList<Task>();
 	
@@ -21,6 +21,13 @@ public class Lista {
 			} else {
 				System.out.println("Tarea NO completada");
 			}
+		}
+	}
+	
+	public void completeAll() {
+		for ( int i = 0; i < this.tasks.size(); i++) {
+			this.tasks.get(i).setComplete();
+			
 		}
 	}
 
